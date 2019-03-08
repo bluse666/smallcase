@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>通过切换 class，切换动画</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.js"></script>
+    <style>
+        *{ padding:0;margin:0;font-size:14px;box-sizing:border-box; }
+        .div{ width: 240px;height: 160px;border: 1px solid #aaa;margin: 100px auto;text-align:center;line-height:160px; }
+        button{ margin-right: 5px;padding: 0 10px; }
+        .animate{ animation-fill-mode: both; }
+        .rotate{ animation-name: rotate;animation-duration: 2.4s; }
+        @keyframes rotate{
+            0%{ transform: rotate(0deg); }100%{ transform: rotate(360deg); }
+        }
+        .scale{ animation-name: scale;animation-duration: 1s; }
+        @keyframes scale{
+            0%,100%{ transform: scale(1); }50%{ transform: scale(1.5); }
+        }
+    </style>
+</head>
+<body>
+<div class="div animate">Hello</div>
+<p align="center"><button id="rotate">rotate</button><button id="scale">scale</button></p>
+</body>
+<script type="text/javascript">
+    $(function(){
+        $('#rotate').click(function(){
+            $(".div").addClass('rotate').removeClass('scale');
+        });
+        $('#scale').click(function(){
+            $(".div").addClass('scale').removeClass('rotate');
+        });
+    });
+</script>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            min-width:600px;
+        }
+        #header,#footer{
+            width:100%;
+            height:40px;
+            line-height:40px;
+            text-align:center;
+            background:yellow;
+        }
+        #content{
+            text-align:center;
+            overflow:hidden;
+        }
+        #content .left,#content .right,#content .middle{
+            float:left;
+            padding-bottom:10000px;
+            margin-bottom:-10000px;
+        }
+        #content .middle{
+            width:100%;
+            background:orangered;
+        }
+        #content .left{
+            margin-left:-100%;
+            width:180px;
+            background:deepskyblue;
+        }
+        #content .right{
+            margin-left:-180px;
+            width:180px;
+            background:deeppink;
+        }
+        #content .middle .middleInner{
+            margin-left:180px;
+            margin-right:180px;
+        }
+    </style>
+</head>
+<body>
+<header id="header">天庭</header>
+<section id="content">
+    <div class="middle">
+        <div class="middleInner">中锋出击！冲冲冲！</div>
+    </div>
+    <div class="left">
+        <p>我乃左家军</p><br>
+        <p>我乃左家军</p><br>
+        <p>我乃左家军</p><br>
+        <p>我乃左家军</p><br>
+        <p>我乃左家军</p><br>
+        <p>我乃左家军</p><br>
+        <p>我乃左家军</p><br>
+        <p>我乃左家军</p><br>
+        <p>我乃左家军</p><br>
+        <p>我乃左家军</p><br>
+        <p>我乃左家军</p><br>
+        <p>我乃左家军</p><br>
+        <p>我乃左家军</p><br>
+        <p>我乃左家军</p>
+    </div>
+    <div class="right">右家军在此</div>
+</section>
+<footer id="footer">地府</footer>
+</body>
+<script type="text/javascript">
+    window.onload = function () {
+        var box = document.getElementById('box');
+
+
+    }
+</script>
+</html>
